@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result {
+            text-align: center;
+        }
+        .duplicate {
+            color: red;
+        }
+        .not-duplicate {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h1>Result</h1>
+        {% if is_duplicate %}
+            <p class="duplicate">Duplicate: These questions are similar.</p>
+        {% else %}
+            <p class="not-duplicate">Not Duplicate: These questions are different.</p>
+        {% endif %}
+
+    </div>
+</body>
+</html>
